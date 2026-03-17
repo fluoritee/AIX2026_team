@@ -1,0 +1,886 @@
+
+(base) C:\Windows\System32>cd bin\dataset
+지정된 경로를 찾을 수 없습니다.
+
+(base) C:\Windows\System32>]cd bin\dataset
+']cd'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+(base) C:\Windows\System32>cd bin\dataset
+지정된 경로를 찾을 수 없습니다.
+
+(base) C:\Windows\System32>cd bin\dataset
+지정된 경로를 찾을 수 없습니다.
+
+(base) C:\Windows\System32> cd ..\..\skeleton
+
+(base) C:\skeleton> cd bin\dataset
+
+(base) C:\skeleton\bin\dataset>C:\skeleton\bin\dataset>python.exe make_list_cur.py
+'C:\skeleton\bin\dataset'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+(base) C:\skeleton\bin\dataset>cd ..
+
+(base) C:\skeleton\bin>script-wins-aix2024-test-all.cmd
+
+(base) C:\skeleton\bin>yolo_cpu.exe detector map yolohw.names aix2024.cfg aix2024.weights -thresh 0.24
+valid: Using default 'C:\skeleton\bin\dataset\target.txt'
+names: Using default 'C:\skeleton\bin\yolohw.names'
+layer     filters    size              input                output
+    0 conv     16  3 x 3 / 1   256 x 256 x   3   ->   256 x 256 x  16 0.057 BF
+    1 max          2 x 2 / 2   256 x 256 x  16   ->   128 x 128 x  16
+    2 conv     32  3 x 3 / 1   128 x 128 x  16   ->   128 x 128 x  32 0.151 BF
+    3 max          2 x 2 / 2   128 x 128 x  32   ->    64 x  64 x  32
+    4 conv     64  3 x 3 / 1    64 x  64 x  32   ->    64 x  64 x  64 0.151 BF
+    5 max          2 x 2 / 2    64 x  64 x  64   ->    32 x  32 x  64
+    6 conv    128  3 x 3 / 1    32 x  32 x  64   ->    32 x  32 x 128 0.151 BF
+    7 max          2 x 2 / 2    32 x  32 x 128   ->    16 x  16 x 128
+    8 conv    256  3 x 3 / 1    16 x  16 x 128   ->    16 x  16 x 256 0.151 BF
+    9 max          2 x 2 / 2    16 x  16 x 256   ->     8 x   8 x 256
+   10 conv    512  3 x 3 / 1     8 x   8 x 256   ->     8 x   8 x 512 0.151 BF
+   11 max          2 x 2 / 1     8 x   8 x 512   ->     8 x   8 x 512
+   12 conv    256  1 x 1 / 1     8 x   8 x 512   ->     8 x   8 x 256 0.017 BF
+   13 conv    512  3 x 3 / 1     8 x   8 x 256   ->     8 x   8 x 512 0.151 BF
+   14 conv    195  1 x 1 / 1     8 x   8 x 512   ->     8 x   8 x 195 0.013 BF
+   15 yolo
+   16 route  12
+   17 conv    128  1 x 1 / 1     8 x   8 x 256   ->     8 x   8 x 128 0.004 BF
+   18 upsample            2x     8 x   8 x 128   ->    16 x  16 x 128
+   19 route  18 8
+   20 conv    195  1 x 1 / 1    16 x  16 x 384   ->    16 x  16 x 195 0.038 BF
+   21 yolo
+Total BFLOPS 1.035
+Loading weights from aix2024.weights...
+Done!
+
+4
+8
+12
+16
+20
+24
+28
+32
+36
+40
+44
+48
+52
+56
+60
+64
+68
+72
+76
+80
+84
+88
+92
+96
+100
+104
+108
+112
+116
+120
+124
+128
+132
+136
+140
+144
+148
+152
+156
+160
+164
+168
+172
+176
+180
+184
+188
+192
+196
+200
+204
+208
+212
+216
+220
+224
+228
+232
+detections_count = 12008, unique_truth_count = 2959
+class_id = 0, name = aunt_jemima_original_syrup,         ap = 82.37 %
+class_id = 1, name = band_aid_clear_strips,      ap = 73.66 %
+class_id = 2, name = bumblebee_albacore,         ap = 94.83 %
+class_id = 3, name = cholula_chipotle_hot_sauce,         ap = 79.07 %
+class_id = 4, name = crayola_24_crayons,         ap = 94.44 %
+class_id = 5, name = hersheys_cocoa ,    ap = 100.00 %
+class_id = 6, name = honey_bunches_of_oats_honey_roasted,        ap = 100.00 %
+class_id = 7, name = honey_bunches_of_oats_with_almonds,         ap = 90.18 %
+class_id = 8, name = hunts_sauce,        ap = 95.57 %
+class_id = 9, name = listerine_green,    ap = 97.04 %
+class_id = 10, name = mahatma_rice,      ap = 89.13 %
+class_id = 11, name = white_rain_body_wash,      ap = 100.00 %
+class_id = 12, name = pringles_bbq,      ap = 79.70 %
+class_id = 13, name = cheeze_it,         ap = 100.00 %
+class_id = 14, name = hersheys_bar,      ap = 57.00 %
+class_id = 15, name = redbull,   ap = 85.88 %
+class_id = 16, name = mom_to_mom_sweet_potato_corn_apple,        ap = 69.00 %
+class_id = 17, name = a1_steak_sauce,    ap = 34.13 %
+class_id = 18, name = jif_creamy_peanut_butter,          ap = 78.91 %
+class_id = 19, name = cinnamon_toast_crunch,     ap = 73.27 %
+class_id = 20, name = arm_hammer_baking_soda,    ap = 64.75 %
+class_id = 21, name = dr_pepper,         ap = 100.00 %
+class_id = 22, name = haribo_gold_bears_gummi_candy,     ap = 84.46 %
+class_id = 23, name = bulls_eye_bbq_sauce_original,      ap = 90.72 %
+class_id = 24, name = reeses_pieces,     ap = 100.00 %
+class_id = 25, name = clif_crunch_peanut_butter,         ap = 73.53 %
+class_id = 26, name = mom_to_mom_butternut_squash_pear,          ap = 90.05 %
+class_id = 27, name = pop_tararts_strawberry,    ap = 91.21 %
+class_id = 28, name = quaker_big_chewy_chocolate_chip,   ap = 77.93 %
+class_id = 29, name = spam,      ap = 61.59 %
+class_id = 30, name = coffee_mate_french_vanilla,        ap = 57.76 %
+class_id = 31, name = pepperidge_farm_milk_chocolate_macadamia_cookies,          ap = 74.59 %
+class_id = 32, name = kitkat_king_size,          ap = 60.20 %
+class_id = 33, name = snickers,          ap = 11.17 %
+class_id = 34, name = toblerone_milk_chocolate,          ap = 41.16 %
+class_id = 35, name = clif_z_bar_chocolate_chip,         ap = 97.71 %
+class_id = 36, name = nature_valley_crunchy_oats_n_honey,        ap = 86.78 %
+class_id = 37, name = ritz_crackers,     ap = 100.00 %
+class_id = 38, name = palmolive_orange,          ap = 87.18 %
+class_id = 39, name = crystal_hot_sauce,         ap = 85.22 %
+class_id = 40, name = tapatio_hot_sauce,         ap = 66.87 %
+class_id = 41, name = nabisco_nilla_wafers,      ap = 85.76 %
+class_id = 42, name = pepperidge_farm_milano_cookies_double_chocolate,   ap = 94.20 %
+class_id = 43, name = campbells_chicken_noodle_soup,     ap = 99.47 %
+class_id = 44, name = frappuccino_coffee,        ap = 91.53 %
+class_id = 45, name = chewy_dips_chocolate_chip,         ap = 64.94 %
+class_id = 46, name = chewy_dips_peanut_butter,          ap = 89.97 %
+class_id = 47, name = nature_vally_fruit_and_nut,        ap = 92.30 %
+class_id = 48, name = cheerios,          ap = 96.27 %
+class_id = 49, name = lindt_excellence_cocoa_dark_chocolate,     ap = 81.82 %
+class_id = 50, name = hersheys_symphony,         ap = 100.00 %
+class_id = 51, name = campbells_chunky_classic_chicken_noodle,   ap = 94.65 %
+class_id = 52, name = martinellis_apple_juice,   ap = 79.72 %
+class_id = 53, name = dove_pink,         ap = 74.48 %
+class_id = 54, name = dove_white,        ap = 88.93 %
+class_id = 55, name = david_sunflower_seeds,     ap = 95.94 %
+class_id = 56, name = monster_energy,    ap = 44.72 %
+class_id = 57, name = act_ii_butter_lovers_popcorn,      ap = 86.10 %
+class_id = 58, name = coca_cola_glass_bottle,    ap = 81.61 %
+class_id = 59, name = twix,      ap = 85.90 %
+ for thresh = 0.24, precision = 0.74, recall = 0.64, F1-score = 0.69
+ for thresh = 0.24, TP = 1895, FP = 671, FN = 1064, average IoU = 55.01 %
+
+ mean average precision (mAP) = 0.817559, or 81.76 %
+Total Detection Time: 9.000000 Seconds
+
+(base) C:\skeleton\bin>pause
+계속하려면 아무 키나 누르십시오 . . .
+
+(base) C:\skeleton\bin>script-wins-aix2024-test-all-quantized.cmd
+
+(base) C:\skeleton\bin>yolo_cpu.exe detector map yolohw.names aix2024.cfg aix2024.weights -thresh 0.24 -quantized
+valid: Using default 'C:\skeleton\bin\dataset\target.txt'
+names: Using default 'C:\skeleton\bin\yolohw.names'
+layer     filters    size              input                output
+    0 conv     16  3 x 3 / 1   256 x 256 x   3   ->   256 x 256 x  16 0.057 BF
+    1 max          2 x 2 / 2   256 x 256 x  16   ->   128 x 128 x  16
+    2 conv     32  3 x 3 / 1   128 x 128 x  16   ->   128 x 128 x  32 0.151 BF
+    3 max          2 x 2 / 2   128 x 128 x  32   ->    64 x  64 x  32
+    4 conv     64  3 x 3 / 1    64 x  64 x  32   ->    64 x  64 x  64 0.151 BF
+    5 max          2 x 2 / 2    64 x  64 x  64   ->    32 x  32 x  64
+    6 conv    128  3 x 3 / 1    32 x  32 x  64   ->    32 x  32 x 128 0.151 BF
+    7 max          2 x 2 / 2    32 x  32 x 128   ->    16 x  16 x 128
+    8 conv    256  3 x 3 / 1    16 x  16 x 128   ->    16 x  16 x 256 0.151 BF
+    9 max          2 x 2 / 2    16 x  16 x 256   ->     8 x   8 x 256
+   10 conv    512  3 x 3 / 1     8 x   8 x 256   ->     8 x   8 x 512 0.151 BF
+   11 max          2 x 2 / 1     8 x   8 x 512   ->     8 x   8 x 512
+   12 conv    256  1 x 1 / 1     8 x   8 x 512   ->     8 x   8 x 256 0.017 BF
+   13 conv    512  3 x 3 / 1     8 x   8 x 256   ->     8 x   8 x 512 0.151 BF
+   14 conv    195  1 x 1 / 1     8 x   8 x 512   ->     8 x   8 x 195 0.013 BF
+   15 yolo
+   16 route  12
+   17 conv    128  1 x 1 / 1     8 x   8 x 256   ->     8 x   8 x 128 0.004 BF
+   18 upsample            2x     8 x   8 x 128   ->    16 x  16 x 128
+   19 route  18 8
+   20 conv    195  1 x 1 / 1    16 x  16 x 384   ->    16 x  16 x 195 0.038 BF
+   21 yolo
+Total BFLOPS 1.035
+Loading weights from aix2024.weights...
+Done!
+
+Multipler    Input    Weight    Bias
+ CONV0:         128     16      2048
+ CONV2:         16      64      1024
+ CONV4:         16      64      1024
+ CONV6:         16      64      1024
+ CONV8:         16      64      1024
+ CONV10:        16      64      1024
+ CONV12:        16      64      1024
+ CONV13:        16      64      1024
+ CONV14:        16      64      1024
+ CONV17:        16      64      1024
+ CONV20:        16      64      1024
+4
+8
+12
+16
+20
+24
+28
+32
+36
+40
+44
+48
+52
+56
+60
+64
+68
+72
+76
+80
+84
+88
+92
+96
+100
+104
+108
+112
+116
+120
+124
+128
+132
+136
+140
+144
+148
+152
+156
+160
+164
+168
+172
+176
+180
+184
+188
+192
+196
+200
+204
+208
+212
+216
+220
+224
+228
+232
+detections_count = 16995, unique_truth_count = 2959
+class_id = 0, name = aunt_jemima_original_syrup,         ap = 65.62 %
+class_id = 1, name = band_aid_clear_strips,      ap = 6.01 %
+class_id = 2, name = bumblebee_albacore,         ap = 68.77 %
+class_id = 3, name = cholula_chipotle_hot_sauce,         ap = 39.48 %
+class_id = 4, name = crayola_24_crayons,         ap = 37.74 %
+class_id = 5, name = hersheys_cocoa ,    ap = 46.83 %
+class_id = 6, name = honey_bunches_of_oats_honey_roasted,        ap = 91.80 %
+class_id = 7, name = honey_bunches_of_oats_with_almonds,         ap = 61.93 %
+class_id = 8, name = hunts_sauce,        ap = 55.42 %
+class_id = 9, name = listerine_green,    ap = 95.20 %
+class_id = 10, name = mahatma_rice,      ap = 93.21 %
+class_id = 11, name = white_rain_body_wash,      ap = 78.82 %
+class_id = 12, name = pringles_bbq,      ap = 70.80 %
+class_id = 13, name = cheeze_it,         ap = 76.66 %
+class_id = 14, name = hersheys_bar,      ap = 16.34 %
+class_id = 15, name = redbull,   ap = 61.87 %
+class_id = 16, name = mom_to_mom_sweet_potato_corn_apple,        ap = 53.42 %
+class_id = 17, name = a1_steak_sauce,    ap = 19.31 %
+class_id = 18, name = jif_creamy_peanut_butter,          ap = 37.42 %
+class_id = 19, name = cinnamon_toast_crunch,     ap = 55.15 %
+class_id = 20, name = arm_hammer_baking_soda,    ap = 44.29 %
+class_id = 21, name = dr_pepper,         ap = 78.57 %
+class_id = 22, name = haribo_gold_bears_gummi_candy,     ap = 69.65 %
+class_id = 23, name = bulls_eye_bbq_sauce_original,      ap = 19.91 %
+class_id = 24, name = reeses_pieces,     ap = 86.33 %
+class_id = 25, name = clif_crunch_peanut_butter,         ap = 59.90 %
+class_id = 26, name = mom_to_mom_butternut_squash_pear,          ap = 79.30 %
+class_id = 27, name = pop_tararts_strawberry,    ap = 72.69 %
+class_id = 28, name = quaker_big_chewy_chocolate_chip,   ap = 28.81 %
+class_id = 29, name = spam,      ap = 39.93 %
+class_id = 30, name = coffee_mate_french_vanilla,        ap = 23.59 %
+class_id = 31, name = pepperidge_farm_milk_chocolate_macadamia_cookies,          ap = 21.31 %
+class_id = 32, name = kitkat_king_size,          ap = 35.52 %
+class_id = 33, name = snickers,          ap = 9.09 %
+class_id = 34, name = toblerone_milk_chocolate,          ap = 28.92 %
+class_id = 35, name = clif_z_bar_chocolate_chip,         ap = 57.37 %
+class_id = 36, name = nature_valley_crunchy_oats_n_honey,        ap = 84.12 %
+class_id = 37, name = ritz_crackers,     ap = 87.30 %
+class_id = 38, name = palmolive_orange,          ap = 69.79 %
+class_id = 39, name = crystal_hot_sauce,         ap = 32.63 %
+class_id = 40, name = tapatio_hot_sauce,         ap = 61.68 %
+class_id = 41, name = nabisco_nilla_wafers,      ap = 89.12 %
+class_id = 42, name = pepperidge_farm_milano_cookies_double_chocolate,   ap = 73.35 %
+class_id = 43, name = campbells_chicken_noodle_soup,     ap = 45.40 %
+class_id = 44, name = frappuccino_coffee,        ap = 80.00 %
+class_id = 45, name = chewy_dips_chocolate_chip,         ap = 35.23 %
+class_id = 46, name = chewy_dips_peanut_butter,          ap = 72.98 %
+class_id = 47, name = nature_vally_fruit_and_nut,        ap = 24.98 %
+class_id = 48, name = cheerios,          ap = 87.83 %
+class_id = 49, name = lindt_excellence_cocoa_dark_chocolate,     ap = 59.94 %
+class_id = 50, name = hersheys_symphony,         ap = 98.99 %
+class_id = 51, name = campbells_chunky_classic_chicken_noodle,   ap = 66.98 %
+class_id = 52, name = martinellis_apple_juice,   ap = 32.10 %
+class_id = 53, name = dove_pink,         ap = 22.91 %
+class_id = 54, name = dove_white,        ap = 58.06 %
+class_id = 55, name = david_sunflower_seeds,     ap = 71.00 %
+class_id = 56, name = monster_energy,    ap = 10.08 %
+class_id = 57, name = act_ii_butter_lovers_popcorn,      ap = 47.84 %
+class_id = 58, name = coca_cola_glass_bottle,    ap = 65.94 %
+class_id = 59, name = twix,      ap = 37.09 %
+ for thresh = 0.24, precision = 0.64, recall = 0.23, F1-score = 0.34
+ for thresh = 0.24, TP = 672, FP = 380, FN = 2287, average IoU = 44.83 %
+
+ mean average precision (mAP) = 0.550382, or 55.04 %
+Total Detection Time: 73.000000 Seconds
+
+(base) C:\skeleton\bin>pause
+계속하려면 아무 키나 누르십시오 . . .
+
+(base) C:\skeleton\bin>script-wins-aix2024-test-all-quantized.cmd
+
+(base) C:\skeleton\bin>yolo_cpu.exe detector map yolohw.names aix2024.cfg aix2024.weights -thresh 0.24 -quantized
+valid: Using default 'C:\skeleton\bin\dataset\target.txt'
+names: Using default 'C:\skeleton\bin\yolohw.names'
+layer     filters    size              input                output
+    0 conv     16  3 x 3 / 1   256 x 256 x   3   ->   256 x 256 x  16 0.057 BF
+    1 max          2 x 2 / 2   256 x 256 x  16   ->   128 x 128 x  16
+    2 conv     32  3 x 3 / 1   128 x 128 x  16   ->   128 x 128 x  32 0.151 BF
+    3 max          2 x 2 / 2   128 x 128 x  32   ->    64 x  64 x  32
+    4 conv     64  3 x 3 / 1    64 x  64 x  32   ->    64 x  64 x  64 0.151 BF
+    5 max          2 x 2 / 2    64 x  64 x  64   ->    32 x  32 x  64
+    6 conv    128  3 x 3 / 1    32 x  32 x  64   ->    32 x  32 x 128 0.151 BF
+    7 max          2 x 2 / 2    32 x  32 x 128   ->    16 x  16 x 128
+    8 conv    256  3 x 3 / 1    16 x  16 x 128   ->    16 x  16 x 256 0.151 BF
+    9 max          2 x 2 / 2    16 x  16 x 256   ->     8 x   8 x 256
+   10 conv    512  3 x 3 / 1     8 x   8 x 256   ->     8 x   8 x 512 0.151 BF
+   11 max          2 x 2 / 1     8 x   8 x 512   ->     8 x   8 x 512
+   12 conv    256  1 x 1 / 1     8 x   8 x 512   ->     8 x   8 x 256 0.017 BF
+   13 conv    512  3 x 3 / 1     8 x   8 x 256   ->     8 x   8 x 512 0.151 BF
+   14 conv    195  1 x 1 / 1     8 x   8 x 512   ->     8 x   8 x 195 0.013 BF
+   15 yolo
+   16 route  12
+   17 conv    128  1 x 1 / 1     8 x   8 x 256   ->     8 x   8 x 128 0.004 BF
+   18 upsample            2x     8 x   8 x 128   ->    16 x  16 x 128
+   19 route  18 8
+   20 conv    195  1 x 1 / 1    16 x  16 x 384   ->    16 x  16 x 195 0.038 BF
+   21 yolo
+Total BFLOPS 1.035
+Loading weights from aix2024.weights...
+Done!
+
+Multipler    Input    Weight    Bias
+ CONV0:         128     16      2048
+ CONV2:         16      64      1024
+ CONV4:         16      64      1024
+ CONV6:         16      64      1024
+ CONV8:         16      64      1024
+ CONV10:        16      64      1024
+ CONV12:        16      64      1024
+ CONV13:        16      64      1024
+ CONV14:        16      64      1024
+ CONV17:        16      64      1024
+ CONV20:        16      64      1024
+4
+8
+12
+16
+20
+24
+28
+32
+36
+40
+44
+48
+52
+56
+60
+64
+68
+72
+76
+80
+84
+88
+92
+96
+100
+104
+108
+112
+116
+120
+124
+128
+132
+136
+140
+144
+148
+152
+156
+160
+164
+168
+172
+176
+180
+184
+188
+192
+196
+200
+204
+208
+212
+216
+220
+224
+228
+232
+detections_count = 16995, unique_truth_count = 2959
+class_id = 0, name = aunt_jemima_original_syrup,         ap = 65.62 %
+class_id = 1, name = band_aid_clear_strips,      ap = 6.01 %
+class_id = 2, name = bumblebee_albacore,         ap = 68.77 %
+class_id = 3, name = cholula_chipotle_hot_sauce,         ap = 39.48 %
+class_id = 4, name = crayola_24_crayons,         ap = 37.74 %
+class_id = 5, name = hersheys_cocoa ,    ap = 46.83 %
+class_id = 6, name = honey_bunches_of_oats_honey_roasted,        ap = 91.80 %
+class_id = 7, name = honey_bunches_of_oats_with_almonds,         ap = 61.93 %
+class_id = 8, name = hunts_sauce,        ap = 55.42 %
+class_id = 9, name = listerine_green,    ap = 95.20 %
+class_id = 10, name = mahatma_rice,      ap = 93.21 %
+class_id = 11, name = white_rain_body_wash,      ap = 78.82 %
+class_id = 12, name = pringles_bbq,      ap = 70.80 %
+class_id = 13, name = cheeze_it,         ap = 76.66 %
+class_id = 14, name = hersheys_bar,      ap = 16.34 %
+class_id = 15, name = redbull,   ap = 61.87 %
+class_id = 16, name = mom_to_mom_sweet_potato_corn_apple,        ap = 53.42 %
+class_id = 17, name = a1_steak_sauce,    ap = 19.31 %
+class_id = 18, name = jif_creamy_peanut_butter,          ap = 37.42 %
+class_id = 19, name = cinnamon_toast_crunch,     ap = 55.15 %
+class_id = 20, name = arm_hammer_baking_soda,    ap = 44.29 %
+class_id = 21, name = dr_pepper,         ap = 78.57 %
+class_id = 22, name = haribo_gold_bears_gummi_candy,     ap = 69.65 %
+class_id = 23, name = bulls_eye_bbq_sauce_original,      ap = 19.91 %
+class_id = 24, name = reeses_pieces,     ap = 86.33 %
+class_id = 25, name = clif_crunch_peanut_butter,         ap = 59.90 %
+class_id = 26, name = mom_to_mom_butternut_squash_pear,          ap = 79.30 %
+class_id = 27, name = pop_tararts_strawberry,    ap = 72.69 %
+class_id = 28, name = quaker_big_chewy_chocolate_chip,   ap = 28.81 %
+class_id = 29, name = spam,      ap = 39.93 %
+class_id = 30, name = coffee_mate_french_vanilla,        ap = 23.59 %
+class_id = 31, name = pepperidge_farm_milk_chocolate_macadamia_cookies,          ap = 21.31 %
+class_id = 32, name = kitkat_king_size,          ap = 35.52 %
+class_id = 33, name = snickers,          ap = 9.09 %
+class_id = 34, name = toblerone_milk_chocolate,          ap = 28.92 %
+class_id = 35, name = clif_z_bar_chocolate_chip,         ap = 57.37 %
+class_id = 36, name = nature_valley_crunchy_oats_n_honey,        ap = 84.12 %
+class_id = 37, name = ritz_crackers,     ap = 87.30 %
+class_id = 38, name = palmolive_orange,          ap = 69.79 %
+class_id = 39, name = crystal_hot_sauce,         ap = 32.63 %
+class_id = 40, name = tapatio_hot_sauce,         ap = 61.68 %
+class_id = 41, name = nabisco_nilla_wafers,      ap = 89.12 %
+class_id = 42, name = pepperidge_farm_milano_cookies_double_chocolate,   ap = 73.35 %
+class_id = 43, name = campbells_chicken_noodle_soup,     ap = 45.40 %
+class_id = 44, name = frappuccino_coffee,        ap = 80.00 %
+class_id = 45, name = chewy_dips_chocolate_chip,         ap = 35.23 %
+class_id = 46, name = chewy_dips_peanut_butter,          ap = 72.98 %
+class_id = 47, name = nature_vally_fruit_and_nut,        ap = 24.98 %
+class_id = 48, name = cheerios,          ap = 87.83 %
+class_id = 49, name = lindt_excellence_cocoa_dark_chocolate,     ap = 59.94 %
+class_id = 50, name = hersheys_symphony,         ap = 98.99 %
+class_id = 51, name = campbells_chunky_classic_chicken_noodle,   ap = 66.98 %
+class_id = 52, name = martinellis_apple_juice,   ap = 32.10 %
+class_id = 53, name = dove_pink,         ap = 22.91 %
+class_id = 54, name = dove_white,        ap = 58.06 %
+class_id = 55, name = david_sunflower_seeds,     ap = 71.00 %
+class_id = 56, name = monster_energy,    ap = 10.08 %
+class_id = 57, name = act_ii_butter_lovers_popcorn,      ap = 47.84 %
+class_id = 58, name = coca_cola_glass_bottle,    ap = 65.94 %
+class_id = 59, name = twix,      ap = 37.09 %
+ for thresh = 0.24, precision = 0.64, recall = 0.23, F1-score = 0.34
+ for thresh = 0.24, TP = 672, FP = 380, FN = 2287, average IoU = 44.83 %
+
+ mean average precision (mAP) = 0.550382, or 55.04 %
+Total Detection Time: 59.000000 Seconds
+
+(base) C:\skeleton\bin>pause
+계속하려면 아무 키나 누르십시오 . . .
+
+(base) C:\skeleton\bin>script-wins-aix2024-test-all-quantized.cmd
+
+(base) C:\skeleton\bin>yolo_cpu.exe detector map yolohw.names aix2024.cfg aix2024.weights -thresh 0.24 -quantized
+valid: Using default 'C:\skeleton\bin\dataset\target.txt'
+names: Using default 'C:\skeleton\bin\yolohw.names'
+layer     filters    size              input                output
+    0 conv     16  3 x 3 / 1   256 x 256 x   3   ->   256 x 256 x  16 0.057 BF
+    1 max          2 x 2 / 2   256 x 256 x  16   ->   128 x 128 x  16
+    2 conv     32  3 x 3 / 1   128 x 128 x  16   ->   128 x 128 x  32 0.151 BF
+    3 max          2 x 2 / 2   128 x 128 x  32   ->    64 x  64 x  32
+    4 conv     64  3 x 3 / 1    64 x  64 x  32   ->    64 x  64 x  64 0.151 BF
+    5 max          2 x 2 / 2    64 x  64 x  64   ->    32 x  32 x  64
+    6 conv    128  3 x 3 / 1    32 x  32 x  64   ->    32 x  32 x 128 0.151 BF
+    7 max          2 x 2 / 2    32 x  32 x 128   ->    16 x  16 x 128
+    8 conv    256  3 x 3 / 1    16 x  16 x 128   ->    16 x  16 x 256 0.151 BF
+    9 max          2 x 2 / 2    16 x  16 x 256   ->     8 x   8 x 256
+   10 conv    512  3 x 3 / 1     8 x   8 x 256   ->     8 x   8 x 512 0.151 BF
+   11 max          2 x 2 / 1     8 x   8 x 512   ->     8 x   8 x 512
+   12 conv    256  1 x 1 / 1     8 x   8 x 512   ->     8 x   8 x 256 0.017 BF
+   13 conv    512  3 x 3 / 1     8 x   8 x 256   ->     8 x   8 x 512 0.151 BF
+   14 conv    195  1 x 1 / 1     8 x   8 x 512   ->     8 x   8 x 195 0.013 BF
+   15 yolo
+   16 route  12
+   17 conv    128  1 x 1 / 1     8 x   8 x 256   ->     8 x   8 x 128 0.004 BF
+   18 upsample            2x     8 x   8 x 128   ->    16 x  16 x 128
+   19 route  18 8
+   20 conv    195  1 x 1 / 1    16 x  16 x 384   ->    16 x  16 x 195 0.038 BF
+   21 yolo
+Total BFLOPS 1.035
+Loading weights from aix2024.weights...
+Done!
+
+=== Weight Distribution Profiling (99.9% Percentile) ===
+Layer   wmax_999  optimal_mult
+ CONV00:        wmax_999=6.0747         optimal=16
+ CONV02:        wmax_999=0.4083         optimal=256
+ CONV04:        wmax_999=0.3616         optimal=256
+ CONV06:        wmax_999=0.2457         optimal=256
+ CONV08:        wmax_999=0.3319         optimal=256
+ CONV10:        wmax_999=0.0577         optimal=256
+ CONV12:        wmax_999=0.2086         optimal=256
+ CONV13:        wmax_999=0.1689         optimal=256
+ CONV14:        wmax_999=0.2594         optimal=256
+ CONV17:        wmax_999=0.7312         optimal=128
+ CONV20:        wmax_999=0.3840         optimal=256
+========================================================
+Multipler    Input    Weight    Bias
+ CONV00:        128     16      2048
+ CONV02:        8       256     2048
+ CONV04:        16      256     4096
+ CONV06:        16      256     4096
+ CONV08:        16      256     4096
+ CONV10:        16      256     4096
+ CONV12:        32      256     8192
+ CONV13:        32      256     8192
+ CONV14:        32      256     8192
+ CONV17:        32      128     4096
+ CONV20:        8       256     2048
+4
+8
+12
+16
+20
+24
+28
+32
+36
+40
+44
+48
+52
+56
+60
+64
+68
+72
+76
+80
+84
+88
+92
+96
+100
+104
+108
+112
+116
+120
+124
+128
+132
+136
+140
+144
+148
+152
+156
+160
+164
+168
+172
+176
+180
+184
+188
+192
+196
+200
+204
+208
+212
+216
+220
+224
+228
+232
+detections_count = 13539, unique_truth_count = 2959
+class_id = 0, name = aunt_jemima_original_syrup,         ap = 69.71 %
+class_id = 1, name = band_aid_clear_strips,      ap = 72.63 %
+class_id = 2, name = bumblebee_albacore,         ap = 94.76 %
+class_id = 3, name = cholula_chipotle_hot_sauce,         ap = 78.36 %
+class_id = 4, name = crayola_24_crayons,         ap = 93.62 %
+class_id = 5, name = hersheys_cocoa ,    ap = 100.00 %
+class_id = 6, name = honey_bunches_of_oats_honey_roasted,        ap = 100.00 %
+class_id = 7, name = honey_bunches_of_oats_with_almonds,         ap = 88.57 %
+class_id = 8, name = hunts_sauce,        ap = 96.31 %
+class_id = 9, name = listerine_green,    ap = 98.70 %
+class_id = 10, name = mahatma_rice,      ap = 92.71 %
+class_id = 11, name = white_rain_body_wash,      ap = 98.02 %
+class_id = 12, name = pringles_bbq,      ap = 78.72 %
+class_id = 13, name = cheeze_it,         ap = 100.00 %
+class_id = 14, name = hersheys_bar,      ap = 53.03 %
+class_id = 15, name = redbull,   ap = 89.93 %
+class_id = 16, name = mom_to_mom_sweet_potato_corn_apple,        ap = 71.93 %
+class_id = 17, name = a1_steak_sauce,    ap = 29.34 %
+class_id = 18, name = jif_creamy_peanut_butter,          ap = 78.21 %
+class_id = 19, name = cinnamon_toast_crunch,     ap = 73.33 %
+class_id = 20, name = arm_hammer_baking_soda,    ap = 68.82 %
+class_id = 21, name = dr_pepper,         ap = 100.00 %
+class_id = 22, name = haribo_gold_bears_gummi_candy,     ap = 85.14 %
+class_id = 23, name = bulls_eye_bbq_sauce_original,      ap = 90.91 %
+class_id = 24, name = reeses_pieces,     ap = 100.00 %
+class_id = 25, name = clif_crunch_peanut_butter,         ap = 78.41 %
+class_id = 26, name = mom_to_mom_butternut_squash_pear,          ap = 90.08 %
+class_id = 27, name = pop_tararts_strawberry,    ap = 88.62 %
+class_id = 28, name = quaker_big_chewy_chocolate_chip,   ap = 69.28 %
+class_id = 29, name = spam,      ap = 57.26 %
+class_id = 30, name = coffee_mate_french_vanilla,        ap = 57.81 %
+class_id = 31, name = pepperidge_farm_milk_chocolate_macadamia_cookies,          ap = 76.69 %
+class_id = 32, name = kitkat_king_size,          ap = 62.78 %
+class_id = 33, name = snickers,          ap = 14.17 %
+class_id = 34, name = toblerone_milk_chocolate,          ap = 51.54 %
+class_id = 35, name = clif_z_bar_chocolate_chip,         ap = 97.60 %
+class_id = 36, name = nature_valley_crunchy_oats_n_honey,        ap = 88.68 %
+class_id = 37, name = ritz_crackers,     ap = 99.17 %
+class_id = 38, name = palmolive_orange,          ap = 86.64 %
+class_id = 39, name = crystal_hot_sauce,         ap = 84.23 %
+class_id = 40, name = tapatio_hot_sauce,         ap = 67.89 %
+class_id = 41, name = nabisco_nilla_wafers,      ap = 96.15 %
+class_id = 42, name = pepperidge_farm_milano_cookies_double_chocolate,   ap = 94.55 %
+class_id = 43, name = campbells_chicken_noodle_soup,     ap = 98.38 %
+class_id = 44, name = frappuccino_coffee,        ap = 90.80 %
+class_id = 45, name = chewy_dips_chocolate_chip,         ap = 68.17 %
+class_id = 46, name = chewy_dips_peanut_butter,          ap = 86.10 %
+class_id = 47, name = nature_vally_fruit_and_nut,        ap = 92.52 %
+class_id = 48, name = cheerios,          ap = 95.14 %
+class_id = 49, name = lindt_excellence_cocoa_dark_chocolate,     ap = 85.78 %
+class_id = 50, name = hersheys_symphony,         ap = 100.00 %
+class_id = 51, name = campbells_chunky_classic_chicken_noodle,   ap = 91.78 %
+class_id = 52, name = martinellis_apple_juice,   ap = 77.55 %
+class_id = 53, name = dove_pink,         ap = 75.82 %
+class_id = 54, name = dove_white,        ap = 89.02 %
+class_id = 55, name = david_sunflower_seeds,     ap = 96.61 %
+class_id = 56, name = monster_energy,    ap = 43.58 %
+class_id = 57, name = act_ii_butter_lovers_popcorn,      ap = 94.43 %
+class_id = 58, name = coca_cola_glass_bottle,    ap = 81.15 %
+class_id = 59, name = twix,      ap = 84.38 %
+ for thresh = 0.24, precision = 0.73, recall = 0.64, F1-score = 0.68
+ for thresh = 0.24, TP = 1894, FP = 704, FN = 1065, average IoU = 54.13 %
+
+ mean average precision (mAP) = 0.819251, or 81.93 %
+Total Detection Time: 64.000000 Seconds
+
+(base) C:\skeleton\bin>pause
+계속하려면 아무 키나 누르십시오 . . .
+
+(base) C:\skeleton\bin>script-wins-aix2024-test-all-quantized.cmd
+
+(base) C:\skeleton\bin>yolo_cpu.exe detector map yolohw.names aix2024.cfg aix2024.weights -thresh 0.24 -quantized
+valid: Using default 'C:\skeleton\bin\dataset\target.txt'
+names: Using default 'C:\skeleton\bin\yolohw.names'
+layer     filters    size              input                output
+    0 conv     16  3 x 3 / 1   256 x 256 x   3   ->   256 x 256 x  16 0.057 BF
+    1 max          2 x 2 / 2   256 x 256 x  16   ->   128 x 128 x  16
+    2 conv     32  3 x 3 / 1   128 x 128 x  16   ->   128 x 128 x  32 0.151 BF
+    3 max          2 x 2 / 2   128 x 128 x  32   ->    64 x  64 x  32
+    4 conv     64  3 x 3 / 1    64 x  64 x  32   ->    64 x  64 x  64 0.151 BF
+    5 max          2 x 2 / 2    64 x  64 x  64   ->    32 x  32 x  64
+    6 conv    128  3 x 3 / 1    32 x  32 x  64   ->    32 x  32 x 128 0.151 BF
+    7 max          2 x 2 / 2    32 x  32 x 128   ->    16 x  16 x 128
+    8 conv    256  3 x 3 / 1    16 x  16 x 128   ->    16 x  16 x 256 0.151 BF
+    9 max          2 x 2 / 2    16 x  16 x 256   ->     8 x   8 x 256
+   10 conv    512  3 x 3 / 1     8 x   8 x 256   ->     8 x   8 x 512 0.151 BF
+   11 max          2 x 2 / 1     8 x   8 x 512   ->     8 x   8 x 512
+   12 conv    256  1 x 1 / 1     8 x   8 x 512   ->     8 x   8 x 256 0.017 BF
+   13 conv    512  3 x 3 / 1     8 x   8 x 256   ->     8 x   8 x 512 0.151 BF
+   14 conv    195  1 x 1 / 1     8 x   8 x 512   ->     8 x   8 x 195 0.013 BF
+   15 yolo
+   16 route  12
+   17 conv    128  1 x 1 / 1     8 x   8 x 256   ->     8 x   8 x 128 0.004 BF
+   18 upsample            2x     8 x   8 x 128   ->    16 x  16 x 128
+   19 route  18 8
+   20 conv    195  1 x 1 / 1    16 x  16 x 384   ->    16 x  16 x 195 0.038 BF
+   21 yolo
+Total BFLOPS 1.035
+Loading weights from aix2024.weights...
+Done!
+
+=== Per-Channel Quantization (PCQ) Profiling ===
+ CONV00: PCQ Applied to 16 channels (Input Mult: 128)
+ CONV02: PCQ Applied to 32 channels (Input Mult: 8)
+ CONV04: PCQ Applied to 64 channels (Input Mult: 16)
+ CONV06: PCQ Applied to 128 channels (Input Mult: 16)
+ CONV08: PCQ Applied to 256 channels (Input Mult: 16)
+ CONV10: PCQ Applied to 512 channels (Input Mult: 16)
+ CONV12: PCQ Applied to 256 channels (Input Mult: 32)
+ CONV13: PCQ Applied to 512 channels (Input Mult: 32)
+ CONV14: PCQ Applied to 195 channels (Input Mult: 32)
+ CONV17: PCQ Applied to 128 channels (Input Mult: 32)
+ CONV20: PCQ Applied to 195 channels (Input Mult: 8)
+================================================
+4
+8
+12
+16
+20
+24
+28
+32
+36
+40
+44
+48
+52
+56
+60
+64
+68
+72
+76
+80
+84
+88
+92
+96
+100
+104
+108
+112
+116
+120
+124
+128
+132
+136
+140
+144
+148
+152
+156
+160
+164
+168
+172
+176
+180
+184
+188
+192
+196
+200
+204
+208
+212
+216
+220
+224
+228
+232
+detections_count = 15817, unique_truth_count = 2959
+class_id = 0, name = aunt_jemima_original_syrup,         ap = 79.21 %
+class_id = 1, name = band_aid_clear_strips,      ap = 70.45 %
+class_id = 2, name = bumblebee_albacore,         ap = 94.22 %
+class_id = 3, name = cholula_chipotle_hot_sauce,         ap = 74.84 %
+class_id = 4, name = crayola_24_crayons,         ap = 95.25 %
+class_id = 5, name = hersheys_cocoa ,    ap = 73.13 %
+class_id = 6, name = honey_bunches_of_oats_honey_roasted,        ap = 89.00 %
+class_id = 7, name = honey_bunches_of_oats_with_almonds,         ap = 74.05 %
+class_id = 8, name = hunts_sauce,        ap = 84.18 %
+class_id = 9, name = listerine_green,    ap = 94.12 %
+class_id = 10, name = mahatma_rice,      ap = 98.28 %
+class_id = 11, name = white_rain_body_wash,      ap = 92.36 %
+class_id = 12, name = pringles_bbq,      ap = 80.21 %
+class_id = 13, name = cheeze_it,         ap = 100.00 %
+class_id = 14, name = hersheys_bar,      ap = 62.31 %
+class_id = 15, name = redbull,   ap = 82.29 %
+class_id = 16, name = mom_to_mom_sweet_potato_corn_apple,        ap = 67.32 %
+class_id = 17, name = a1_steak_sauce,    ap = 27.60 %
+class_id = 18, name = jif_creamy_peanut_butter,          ap = 76.63 %
+class_id = 19, name = cinnamon_toast_crunch,     ap = 75.92 %
+class_id = 20, name = arm_hammer_baking_soda,    ap = 67.73 %
+class_id = 21, name = dr_pepper,         ap = 99.33 %
+class_id = 22, name = haribo_gold_bears_gummi_candy,     ap = 88.11 %
+class_id = 23, name = bulls_eye_bbq_sauce_original,      ap = 89.96 %
+class_id = 24, name = reeses_pieces,     ap = 100.00 %
+class_id = 25, name = clif_crunch_peanut_butter,         ap = 57.28 %
+class_id = 26, name = mom_to_mom_butternut_squash_pear,          ap = 81.88 %
+class_id = 27, name = pop_tararts_strawberry,    ap = 87.08 %
+class_id = 28, name = quaker_big_chewy_chocolate_chip,   ap = 79.43 %
+class_id = 29, name = spam,      ap = 56.45 %
+class_id = 30, name = coffee_mate_french_vanilla,        ap = 75.52 %
+class_id = 31, name = pepperidge_farm_milk_chocolate_macadamia_cookies,          ap = 58.24 %
+class_id = 32, name = kitkat_king_size,          ap = 61.89 %
+class_id = 33, name = snickers,          ap = 9.09 %
+class_id = 34, name = toblerone_milk_chocolate,          ap = 49.48 %
+class_id = 35, name = clif_z_bar_chocolate_chip,         ap = 99.09 %
+class_id = 36, name = nature_valley_crunchy_oats_n_honey,        ap = 78.40 %
+class_id = 37, name = ritz_crackers,     ap = 90.91 %
+class_id = 38, name = palmolive_orange,          ap = 90.69 %
+class_id = 39, name = crystal_hot_sauce,         ap = 75.69 %
+class_id = 40, name = tapatio_hot_sauce,         ap = 71.74 %
+class_id = 41, name = nabisco_nilla_wafers,      ap = 74.52 %
+class_id = 42, name = pepperidge_farm_milano_cookies_double_chocolate,   ap = 58.53 %
+class_id = 43, name = campbells_chicken_noodle_soup,     ap = 96.70 %
+class_id = 44, name = frappuccino_coffee,        ap = 93.98 %
+class_id = 45, name = chewy_dips_chocolate_chip,         ap = 64.42 %
+class_id = 46, name = chewy_dips_peanut_butter,          ap = 81.59 %
+class_id = 47, name = nature_vally_fruit_and_nut,        ap = 92.78 %
+class_id = 48, name = cheerios,          ap = 94.20 %
+class_id = 49, name = lindt_excellence_cocoa_dark_chocolate,     ap = 80.13 %
+class_id = 50, name = hersheys_symphony,         ap = 100.00 %
+class_id = 51, name = campbells_chunky_classic_chicken_noodle,   ap = 85.20 %
+class_id = 52, name = martinellis_apple_juice,   ap = 75.73 %
+class_id = 53, name = dove_pink,         ap = 50.71 %
+class_id = 54, name = dove_white,        ap = 80.95 %
+class_id = 55, name = david_sunflower_seeds,     ap = 93.19 %
+class_id = 56, name = monster_energy,    ap = 40.38 %
+class_id = 57, name = act_ii_butter_lovers_popcorn,      ap = 73.10 %
+class_id = 58, name = coca_cola_glass_bottle,    ap = 80.09 %
+class_id = 59, name = twix,      ap = 82.30 %
+ for thresh = 0.24, precision = 0.71, recall = 0.54, F1-score = 0.61
+ for thresh = 0.24, TP = 1586, FP = 658, FN = 1373, average IoU = 51.18 %
+
+ mean average precision (mAP) = 0.776306, or 77.63 %
+Total Detection Time: 70.000000 Seconds
+
+(base) C:\skeleton\bin>pause
+계속하려면 아무 키나 누르십시오 . . .
